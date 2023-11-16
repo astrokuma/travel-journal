@@ -4,7 +4,8 @@ import cardData from './data/cardData'
 import Footer from './components/Footer'
 
 function App() {
-  const cardElements = cardData.map(card => <TravelCard key={card.id} entry={card} />)  
+  const reversedCardData = [...cardData].reverse();
+  const cardElements = reversedCardData.map(card => <TravelCard key={card.id} entry={card} />)  
   return (
     <>
       <Navbar />
